@@ -1,0 +1,37 @@
+ManifestFileVersion: 0
+CRC: 1778138272
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 487b61f954403efc529df2d35b46448a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 965c4c7f8a2c9fe45887641888b735dd
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 61
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2d2187843a6528240b06a24d39cb2ade, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Prefabs/First.prefab
+- Assets/SCRIPTS/First.png
+- Assets/Resources/x.png
+Dependencies: []
