@@ -43,10 +43,11 @@ public class TICTACMANAGER : MonoBehaviour
         c.renderMode = RenderMode.ScreenSpaceOverlay;
         newcanvas.AddComponent<CanvasScaler>();
         newcanvas.AddComponent<GraphicRaycaster>();
+        //SetUIimage(new GameObject(), "Panel", Color.white, 1, new Vector2(Screen.width, Screen.height),new Vector2(0.5)
         GameObject panel = new GameObject("Panel");
         panel.AddComponent<CanvasRenderer>();
         panel.transform.SetParent(newcanvas.transform, false);
-         Image i= panel.AddComponent<Image>();
+        Image i = panel.AddComponent<Image>();
         i.color = Color.white;
         panel.GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.width, Screen.height);
 
@@ -256,7 +257,7 @@ public class TICTACMANAGER : MonoBehaviour
         return match;
     }
 
-  
+
     public void Matchcomplete()
     {
         LcPanel.SetActive(true);
@@ -271,5 +272,21 @@ public class TICTACMANAGER : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    void SetUIimage(GameObject Image, string Objectname, Color clr, float Aplha,Vector2 Size,Vector2 Anchmin,Vector2 Anchmax,Vector2 AnchorPosition,GameObject Setparent)
+    {
+         GameObject panel = new GameObject(Objectname);
+        Image = panel;
+        Image.AddComponent<CanvasRenderer>();
+        Image.transform.SetParent(Setparent.transform, false);
+        Image k = Image.AddComponent<Image>();
+        k.color = Color.black;
+        Color cc = k.color;
+        cc.a = Aplha;
+        k.color = cc;
+        Image.GetComponent<RectTransform>().anchorMax = Anchmax;
+        Image.GetComponent<RectTransform>().anchorMin = Anchmin;
+        Image.GetComponent<RectTransform>().sizeDelta = Size;
+        Image.GetComponent<RectTransform>().anchoredPosition =AnchorPosition;
     }
 }
